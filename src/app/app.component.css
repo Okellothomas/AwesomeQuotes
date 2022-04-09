@@ -1,0 +1,19 @@
+
+.navbar-brand{
+    font-family: 'Akronim', cursive;
+    font-size: 23px;
+}
+
+.d-flex{
+    font-family: 'Akronim', cursive;
+    font-size: 20px;
+    text-decoration: none;
+}
+.d-flex:hover{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(65, 5, 65);
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: aqua;
+}
