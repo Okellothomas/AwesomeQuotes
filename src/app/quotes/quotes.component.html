@@ -1,23 +1,26 @@
 <div class="container-fluid">
-    <h2 class="text-center">Create your Quote</h2>
+    <h2 class="text-center">Create New Quote</h2>
     <hr>
     <form>
         <div class="form-group">
   
-            <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
+            <!-- <label for="name">Name</label> -->
+            <input type="text" required class="form-control" id="name" placeholder="Enter your name"><br>
+
+            <!-- <label for="name">Name</label> -->
+            <input type="text" required class="form-control" id="name" placeholder="Enter the name of the author"><br>
   
         </div>
         <div class="form-group">
   
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
+            <!-- <label for="description">Description</label> -->
+            <textarea class="form-control" id="description" rows="1" required placeholder="Enter the quotes"></textarea><br>
   
         </div>
         <div class="form-group">
-            <label for="complete">Completion</label>
+            <label for="complete">Date of Quote: </label>
             <input type='date' id="complete" required>
-  
+            <button class="btn btn-outline-success" id="quotebutton">Create</button>
         </div>
     </form>
   </div>
