@@ -1,5 +1,13 @@
-
-
-
 <!-- The implementation of quotes. -->
 
+<div class="container-fluid">
+    <div class="row">
+        <h1>Awesome Quotes</h1>
+    </div>
+    <ul>
+        <li *ngFor = 'let quote of quotes'>
+            {{quote.name}}
+        </li>
+    </ul>
+    <p *ngIf='quotes.length > 5'> Your Quotes are all Awesome </p>
+</div>
