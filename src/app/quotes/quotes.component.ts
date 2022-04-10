@@ -10,11 +10,7 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[] = [
-    new Quotes(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','sureone',new Date()),
-    new Quotes(2, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','sureone',new Date()),
-    new Quotes(3, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','sureone',new Date()),
-    new Quotes(4, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','sureone',new Date()),
-    new Quotes(5, 'Watch finding Nemo', 'Find an online version and watch merlin find his son','sureone',new Date())
+    new Quotes(1, '', '','',new Date())
   ];
 
   constructor() { }

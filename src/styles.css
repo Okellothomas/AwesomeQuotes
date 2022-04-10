@@ -3,4 +3,7 @@
 body{
     margin-left: 12%;
     margin-right: 12%;
+    background-image: url('./assets/background/backtwo.jpg');
+     background-size: cover; 
+     background-repeat: no-repeat;
 }
