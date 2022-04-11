@@ -7,8 +7,9 @@
     <ul>
         <div *ngFor = 'let quote of quotes; let i = index'>
         <li>
-           <p>My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is: <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
+           <p style="border: 1px solid green; border-radius: 3%;">My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is: <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
         </li>
+        <app-goal-delete *ngIf=[quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
         </div>
     </ul>
     <!-- <p *ngIf='quotes.length > 0'> Your Quotes are all Awesome </p> -->
@@ -16,12 +17,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6" style="text-align: center;">
+        <div class="col-6" style="text-align: center;" *ngFor = 'let quote of quotes; let i = index'>
             <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p> -->
-            <button (click)= 'deleteQuote(true)'>Delete Quote</button> 
+            <!-- <button (click)= 'deleteQuote(true)'>Delete Quote</button>  -->
+            <app-goal-delete *ngIf='quote.showQuotes' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
         </div>
         <div class="col-2">
             <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/upvote.jpg" alt=""></button>  -->
+            
         </div>
         <div class="col-2">
             <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/downvote.jpg" alt=""></button>  -->

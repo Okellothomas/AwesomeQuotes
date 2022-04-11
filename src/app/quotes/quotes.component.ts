@@ -20,6 +20,12 @@ export class QuotesComponent implements OnInit {
     this.isComplete.emit(complete)
   }
 
+  completeGoal(isComplete: any, index: any){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
+
   deleteQuote(complete:boolean){
     this.isComplete.emit(complete);
   }
