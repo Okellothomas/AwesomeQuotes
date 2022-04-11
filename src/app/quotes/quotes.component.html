@@ -11,13 +11,20 @@
         </li>
         </div>
     </ul>
-    <p *ngIf='quotes.length > 0'> Your Quotes are all Awesome </p>
+    <!-- <p *ngIf='quotes.length > 0'> Your Quotes are all Awesome </p> -->
+</div>
 
-    <div class="col-6">
-        <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p>
-        <button (click)= 'deleteQuote(true)'>Delete Quote</button> -->
-    </div>
-    <div class="col-6">
-
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="text-align: center;">
+            <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p> -->
+            <button (click)= 'deleteQuote(true)'>Delete Quote</button> 
+        </div>
+        <div class="col-2">
+            <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/upvote.jpg" alt=""></button>  -->
+        </div>
+        <div class="col-2">
+            <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/downvote.jpg" alt=""></button>  -->
+        </div>
     </div>
 </div>

@@ -16,6 +16,10 @@ export class QuotesComponent implements OnInit {
     new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date())
   ];
 
+  goalComplete(complete:boolean){
+    this.isComplete.emit(complete)
+  }
+
   deleteQuote(complete:boolean){
     this.isComplete.emit(complete);
   }
