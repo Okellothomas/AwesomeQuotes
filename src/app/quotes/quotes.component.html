@@ -5,11 +5,13 @@
         <h2>Awesome Quotes</h2>
     </div>
     <ul>
-        <li *ngFor = 'let quote of quotes'>
-           <p>My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my authors quote' is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is| <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
+        <div *ngFor = 'let quote of quotes; let i = index'>
+        <li>
+           <p>My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is: <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
         </li>
+        </div>
     </ul>
-    <p *ngIf='quotes.length > 5'> Your Quotes are all Awesome </p>
+    <p *ngIf='quotes.length > 0'> Your Quotes are all Awesome </p>
 
     <div class="col-6">
         <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p>
