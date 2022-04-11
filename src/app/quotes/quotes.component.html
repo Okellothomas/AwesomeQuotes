@@ -7,7 +7,8 @@
     <ul>
         <div *ngFor = 'let quote of quotes; let i = index'>
         <li>
-           <p style="border: 1px solid green; border-radius: 3%;">My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is: <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
+           <h3 style="color: darkblue; font-weight: bolder;">{{quote.quote}}. <button class="btn btn-outline-primary" id="buttonone">Learn More</button></h3>
+           <p id="display" style="border: 1px solid green; border-radius: 5%; display: none;">My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | <span style="color: yellowgreen; font-weight: bolder;">{{quote.published|dateCount}} Days</span> since the quote was published.)</p>
         </li>
         <app-goal-delete *ngIf=[quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
         </div>
