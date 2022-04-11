@@ -7,6 +7,7 @@ import { SlidesComponent } from './slides/slides.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { GoalDeleteComponent } from './goal-delete/goal-delete.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GoalDeleteComponent } from './goal-delete/goal-delete.component';
     SlidesComponent,
     QuotesComponent,
     QuoteFormComponent,
-    GoalDeleteComponent
+    GoalDeleteComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

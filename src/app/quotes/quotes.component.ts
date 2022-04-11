@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
   @Output() isComplete = new EventEmitter<boolean>();
 
   quotes: Quotes[] = [
-    new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date())
+    new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date(2020,3,14))
   ];
 
   goalComplete(complete:boolean){
