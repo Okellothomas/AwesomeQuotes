@@ -6,8 +6,16 @@
     </div>
     <ul>
         <li *ngFor = 'let quote of quotes'>
-            {{quote.name}}
+           <p>My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my authors quote' is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | Date of the quote is| <span style="color: yellowgreen; font-weight: bolder;">{{quote.published}}</span>)</p>
         </li>
     </ul>
     <p *ngIf='quotes.length > 5'> Your Quotes are all Awesome </p>
+
+    <div class="col-6">
+        <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p>
+        <button (click)= 'deleteQuote(true)'>Delete Quote</button> -->
+    </div>
+    <div class="col-6">
+
+    </div>
 </div>
