@@ -9,23 +9,27 @@
 </nav>
 <div class="container-fluid">
   <div class="row">
+    <!-- <div class="col-6"> -->
+      <!-- <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> -->
+      <!-- <app-goal-delete *ngIf='quote.showQuotes' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete> -->
+    <!-- </div> -->
     <div class="col-6">
       <app-slides></app-slides>
     </div>
     <div class="col-6">
-      <app-quote-form></app-quote-form>
-    </div>
+      <img src="./assets/quotes/trumpt.jpg" id="roundone">
+    </div> 
   </div>
 </div>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12">
       <app-quotes></app-quotes>
     </div>
-    <div class="col-6">
+    <!-- <div class="col-6">
       <img src="./assets/quotes/trumpt.jpg" id="roundone">
-    </div> 
+    </div>  -->
   </div>
 
   <!-- Implentation of footer -->

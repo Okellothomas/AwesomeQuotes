@@ -9,6 +9,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { GoalDeleteComponent } from './goal-delete/goal-delete.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

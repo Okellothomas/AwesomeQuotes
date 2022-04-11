@@ -1,34 +1,43 @@
 <!-- The implementation of quotes. -->
 
-<div class="container">
+<div class="container" id="formone">
     <div class="row">
+    <div class="col-6">
         <h2>Awesome Quotes</h2>
+    
+        <ul>
+            <div *ngFor = 'let quote of quotes; let i = index'>
+            <li>
+               <h3 style="color: darkblue; font-weight: bolder;">{{quote.quote}}. <button class="btn btn-outline-primary" style="border-radius: 50%;" (click)='toggleDetails(i)'>Learn More</button></h3>
+               <app-quote-details *ngIf='quote.showQuotes' [quote]='quote'></app-quote-details>
+               <p id="display" style="border: 1px solid green; border-radius: 5%; display: none;">My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | <span style="color: yellowgreen; font-weight: bolder;">{{quote.published|dateCount}} Days</span> since the quote was published.)</p>
+            </li>
+            <!-- <app-goal-delete *ngIf=[quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete> -->
+            <app-goal-delete *ngIf='quote.showQuotes' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
+            </div>
+        </ul></div>
+    <div class="col-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <ul>
-        <div *ngFor = 'let quote of quotes; let i = index'>
-        <li>
-           <h3 style="color: darkblue; font-weight: bolder;">{{quote.quote}}. <button class="btn btn-outline-primary" id="buttonone">Learn More</button></h3>
-           <p id="display" style="border: 1px solid green; border-radius: 5%; display: none;">My Quote: (My Name is: <span style="color: rgb(24, 138, 138); font-weight: bolder;">{{quote.name}}</span> | my quote's authors is: <span style="color: red; font-weight: bolder;">{{quote.author}}</span> | and the quote is: <span style="color: darkblue; font-weight: bolder;">{{quote.quote}}</span> | <span style="color: yellowgreen; font-weight: bolder;">{{quote.published|dateCount}} Days</span> since the quote was published.)</p>
-        </li>
-        <app-goal-delete *ngIf=[quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
-        </div>
-    </ul>
+    
     <!-- <p *ngIf='quotes.length > 0'> Your Quotes are all Awesome </p> -->
+
+</div>
 </div>
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
-        <div class="col-6" style="text-align: center;" *ngFor = 'let quote of quotes; let i = index'>
+        <div class="col-6" style="text-align: center;" *ngFor = 'let quote of quotes; let i = index'> -->
             <!-- <p>*ngIf='(isComplete) = 'quoteDelete($event,i)'</p> -->
             <!-- <button (click)= 'deleteQuote(true)'>Delete Quote</button>  -->
-            <app-goal-delete *ngIf='quote.showQuotes' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete>
-        </div>
-        <div class="col-2">
+            <!-- <app-goal-delete *ngIf='quote.showQuotes' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-goal-delete> -->
+        <!-- </div>
+        <div class="col-2"> -->
             <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/upvote.jpg" alt=""></button>  -->
             
-        </div>
-        <div class="col-2">
+        <!-- </div>
+        <div class="col-2"> -->
             <!-- <button (click)= 'deleteQuote(true)'><img src="./assets/social/downvote.jpg" alt=""></button>  -->
-        </div>
+        <!-- </div>
     </div>
-</div>
+</div> -->

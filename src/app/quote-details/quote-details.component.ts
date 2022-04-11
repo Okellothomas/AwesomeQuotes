@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -7,6 +7,8 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+
+  @Input() quote!: Quotes;
 
   quotes: Quotes[] = [
     new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date(2022,3,4))

@@ -16,8 +16,19 @@ export class QuotesComponent implements OnInit {
     new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date(2022,3,4))
   ];
 
+  addNewQuote(quote: any){
+    let goalLength = this.quotes.length;
+    quote.id = goalLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
   goalComplete(complete:boolean){
     this.isComplete.emit(complete)
+  }
+
+  toggleDetails(index: any){
+    this.quotes[index].showQuotes = !this.quotes[index].showQuotes;
   }
 
   completeGoal(isComplete: any, index: any){
