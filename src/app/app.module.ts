@@ -10,6 +10,7 @@ import { GoalDeleteComponent } from './goal-delete/goal-delete.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { FormsModule } from '@angular/forms';
+import { HiglightDirective } from './higlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     QuoteFormComponent,
     GoalDeleteComponent,
     DateCountPipe,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    HiglightDirective
   ],
   imports: [
     BrowserModule,
