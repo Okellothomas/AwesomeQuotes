@@ -1,6 +1,7 @@
 .container-fluid{
-    height: 45vh;
+    height: 55vh;
     width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgb(0,0,0,0.5)),url('../../assets/background/backtwo.jpg');
 }
 #complete{
     color: black;

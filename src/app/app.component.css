@@ -44,3 +44,7 @@
 #foot span{
     color: rgb(152, 201, 119);
 }
+
+body{
+   background-repeat: no-repeat;
+}
