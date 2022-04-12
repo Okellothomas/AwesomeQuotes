@@ -9,7 +9,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { GoalDeleteComponent } from './goal-delete/goal-delete.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HiglightDirective } from './higlight.directive';
 
 @NgModule({
@@ -21,12 +21,13 @@ import { HiglightDirective } from './higlight.directive';
     GoalDeleteComponent,
     DateCountPipe,
     QuoteDetailsComponent,
-    HiglightDirective
+    HiglightDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,7 +16,7 @@ export class QuotesComponent implements OnInit {
     new Quotes(1, 'Sam Osee', 'Abraham Lincoln','Enrich yourself with other mens writings.',new Date(2022,1,1)) //new Date(2022,3,4)
   ];
 
-  addNewQuote(quote: any){
+  addNewQuote(quote:any){
     let goalLength = this.quotes.length;
     quote.id = goalLength+1;
     quote.published = new Date(quote.published);
