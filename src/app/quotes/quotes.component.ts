@@ -19,8 +19,8 @@ export class QuotesComponent implements OnInit {
   addNewQuote(quote: any){
     let goalLength = this.quotes.length;
     quote.id = goalLength+1;
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
+    quote.published = new Date(quote.published);
+    this.quotes.push(quote);
   }
 
   goalComplete(complete:boolean){
